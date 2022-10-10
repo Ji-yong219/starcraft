@@ -14,7 +14,6 @@ class Unit(BaseObject):
     view_range = None
     move_speed = None
 
-    attack_range = None
     attack_target = None
     # 1 : ground
     # 2 : air
@@ -25,6 +24,8 @@ class Unit(BaseObject):
     # 2 : Explosive
     # 3 : Concussive
 
+    ground_attack_range = None
+    ground_attack_cooltime = None
     ground_attack_projectile = None
     ground_attack_damage = None
     
@@ -34,7 +35,31 @@ class Unit(BaseObject):
     # 2 : Explosive
     # 3 : Concussive
 
+    air_attack_range = None
+    air_attack_cooltime = None
     air_attack_projectile = None
     air_attack_damage = None
 
-    Cloaking = None
+    cloaking = None
+    kill_count = None
+
+    def move(self, x, y):
+        pass
+
+    def stop(self):
+        pass
+
+    def attack(self, x, y):
+        pass
+
+    def patrol(self, x, y):
+        pass
+
+    def hold(self):
+        pass
+
+    def gather(self, target):
+        pass
+
+    def build(self, target):
+        pass

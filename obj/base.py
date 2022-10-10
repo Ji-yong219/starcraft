@@ -1,6 +1,8 @@
 class BaseObject:
     name = ""
     tribe = ""
+    size_X = 0
+    size_Y = 0
     cors_X = 0
     cors_Y = 0
     exist_shield = False
@@ -25,6 +27,8 @@ class BaseObject:
     # 1 : impossible
     # 2 : single
     # 3 : multiple
+
+    detecting = None
 
     def __init__(self, x = 0, y = 0):
         self.cors_X = x
